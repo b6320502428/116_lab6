@@ -1,20 +1,19 @@
 #include <stdio.h>
 int main ()
 {
-    int w,h,i,j,t=0,ans;
+    int w,h,i,j,t=0,tmp;
     scanf("%d %d",&w,&h);
-    int n[h][w];
     for(i=0; i<h; i++)
     {
         for(j=0; j<w; j++)
         {
-            scanf("%d",&n[i][j]);
-            t+=n[i][j];
+            scanf("%d",&tmp);
+            t+=tmp;
         }
     }
     if(t%(w*h)>(w*h)/2)
     {
-        printf("%d",(w*h)-t%(w*h));//ans=(w*h)-t%(w*h);
+        printf("%d",(w*h)-t%(w*h));
     }
     else
     {
