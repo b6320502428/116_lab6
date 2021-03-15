@@ -14,12 +14,12 @@ int main ()
         scanf("%s",op);
         if(op[0]=='U')
         {
-            scanf("%d %d",i,Z);
+            scanf("%d %d",&i,&Z);
             array[i]=Z;
         }
         else if(op[0]=='P')
         {
-            scanf("%d %d",A,B);
+            scanf("%d %d",&A,&B);
             max=array[A];
             for(k=A+1;k<=B;k++)
             {
