@@ -23,5 +23,25 @@ int main ()
             win1=i;
         }
     }
+    if(score[num[win1][0]]<score[num[win1][1]])
+    {
+        win2=num[win1][0];
+    }
+    else if(score[num[win1][0]]>score[num[win1][1]])
+    {
+        win2=num[win1][1];
+    }
+    else
+    {
+        if(num[win1][0]<num[win1][1])
+        {
+            win2=num[win1][0];
+        }
+        else
+        {
+            win2=num[win1][1];
+        }
+    }
+    printf("%d %d",win1,win2);
     return 0;
 }
