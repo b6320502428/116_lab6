@@ -33,6 +33,21 @@ int main ()
                 j--;
             }
         }
+        else if(op[i]=='D')
+        {
+            if(j<n-1)
+            {
+                if(array[j][k]=='.')
+                {
+                    array[j][k]='|';
+                }
+                else if(array[j][k]=='-')
+                {
+                    array[j][k]='+';
+                }
+                j++;
+            }
+        }
     }
     return 0;
 }
