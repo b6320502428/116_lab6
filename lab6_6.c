@@ -48,6 +48,21 @@ int main ()
                 j++;
             }
         }
+        else if(op[i]=='L')
+        {
+            if(k>0)
+            {
+                if(array[j][k]=='.')
+                {
+                    array[j][k]='-';
+                }
+                else if(array[j][k]=='|')
+                {
+                    array[j][k]='+';
+                }
+                k--;;
+            }
+        }
     }
     return 0;
 }
