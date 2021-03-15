@@ -1,7 +1,12 @@
 #include <stdio.h>
 int main ()
 {
-    int n;
-
+    int N,Q,j;
+    scanf("%d %d",&N,&Q);
+    int array[N],i,Z,A,B;
+    for(j=0;j<N;j++)
+    {
+        array[j]=0;
+    }
     return 0;
 }
