@@ -2,7 +2,7 @@
 #include <string.h>
 int main ()
 {
-    int n,i,j;
+    int n,i,j,k;
     char op[251];
     scanf("%d",&n);
     char array[n][n];
@@ -14,9 +14,25 @@ int main ()
             array[i][j]='.';
         }
     }
+    j=0;
+    k=0;
     for(i=0; i<strlen(op); i++)
     {
-
+        if(op[i]=='U')
+        {
+            if(j>0)
+            {
+                if(array[j][k]=='.')
+                {
+                    array[j][k]='|';
+                }
+                else if(array[j][k]=='-')
+                {
+                    array[j][k]='+';
+                }
+                j--;
+            }
+        }
     }
     return 0;
 }
