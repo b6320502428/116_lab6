@@ -2,7 +2,7 @@
 #include <string.h>
 int main ()
 {
-    int n,i;
+    int n,i,j,k;
     scanf("%d",&n);
     char str[n][1001],tmp[1001];
     for(i=0;i<n;i++)
@@ -13,24 +13,24 @@ int main ()
             str[i][0]-=32;
         }
     }
-    /*for(j=1; j<n; j++)
+    for(j=1; j<n; j++)
     {
         for(i=0; i<j; i++)
         {
-            if(x[j]<x[i])
+            if(str[j][0]<str[i][0])
             {
-                a=x[j];
+                strcpy(tmp,str[j]); //a=x[j];
                 for(k=j; k>i; k--)
                 {
-                    x[k]=x[k-1];
+                    strcpy(str[k],str[k-1]);//x[k]=x[k-1];
                 }
-                x[k]=a;
+                strcpy(str[k],tmp);//x[k]=a;
             }
         }
-    }*/
-    /*for(i=0;i<n;i++)
+    }
+    for(i=0;i<n;i++)
     {
-        printf("%s",str[i]);
-    }*/
+        printf("%s\n",str[i]);
+    }
     return 0;
 }
