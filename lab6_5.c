@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main ()
 {
-    int w,h,i,j,t=0;
+    int w,h,i,j,t=0,ans;
     scanf("%d %d",&w,&h);
     int n[h][w];
     for(i=0; i<h; i++)
@@ -11,6 +11,10 @@ int main ()
             scanf("%d",&n[i][j]);
             t+=n[i][j];
         }
+    }
+    if(t%(w*h)>(w*h)/2)
+    {
+        ans=(w*h)-t%(w*h);
     }
     return 0;
 }
