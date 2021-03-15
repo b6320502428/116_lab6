@@ -63,6 +63,21 @@ int main ()
                 k--;;
             }
         }
+        else if(op[i]=='R')
+        {
+            if(k<n-1)
+            {
+                if(array[j][k]=='.')
+                {
+                    array[j][k]='-';
+                }
+                else if(array[j][k]=='|')
+                {
+                    array[j][k]='+';
+                }
+                k++;;
+            }
+        }
     }
     return 0;
 }
