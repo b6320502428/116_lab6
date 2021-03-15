@@ -11,8 +11,8 @@ int main ()
     for(i=0;i<n;i++)
     {
         scanf("%d %d",&num[i][0],&num[i][1]);
-        score[num[i][0]]++;
-        score[num[i][1]]++;
+        score[num[i][0]-1]++;
+        score[num[i][1]-1]++;
     }
     max=score[0];
     for(i=1;i<n;i++)
@@ -23,25 +23,25 @@ int main ()
             win1=i;
         }
     }
-    if(score[num[win1][0]]<score[num[win1][1]])
+    if(score[num[win1][0]-1]<score[num[win1][1]-1])
     {
-        win2=num[win1][0];
+        win2=num[win1][0]-1;
     }
-    else if(score[num[win1][0]]>score[num[win1][1]])
+    else if(score[num[win1][0]-1]>score[num[win1][1]-1])
     {
-        win2=num[win1][1];
+        win2=num[win1][1]-1;
     }
     else
     {
-        if(num[win1][0]<num[win1][1])
+        if(num[win1][0]-1<num[win1][1]-1)
         {
-            win2=num[win1][0];
+            win2=num[win1][0]-1;
         }
         else
         {
-            win2=num[win1][1];
+            win2=num[win1][1]-1;
         }
     }
-    printf("%d %d",win1,win2);
+    printf("%d %d",win1+1,win2+1);
     return 0;
 }
