@@ -14,7 +14,11 @@ int main ()
     }
     if(t%(w*h)>(w*h)/2)
     {
-        ans=(w*h)-t%(w*h);
+        printf("%d",(w*h)-t%(w*h));//ans=(w*h)-t%(w*h);
+    }
+    else
+    {
+        printf("%d",t%(w*h));
     }
     return 0;
 }
