@@ -31,6 +31,14 @@ int main ()
                     array[j][k]='+';
                 }
                 j--;
+                if(array[j][k]=='.')
+                {
+                    array[j][k]='|';
+                }
+                else if(array[j][k]=='-')
+                {
+                    array[j][k]='+';
+                }
             }
         }
         else if(op[i]=='D')
@@ -46,6 +54,14 @@ int main ()
                     array[j][k]='+';
                 }
                 j++;
+                if(array[j][k]=='.')
+                {
+                    array[j][k]='|';
+                }
+                else if(array[j][k]=='-')
+                {
+                    array[j][k]='+';
+                }
             }
         }
         else if(op[i]=='L')
@@ -60,7 +76,15 @@ int main ()
                 {
                     array[j][k]='+';
                 }
-                k--;;
+                k--;
+                if(array[j][k]=='.')
+                {
+                    array[j][k]='-';
+                }
+                else if(array[j][k]=='|')
+                {
+                    array[j][k]='+';
+                }
             }
         }
         else if(op[i]=='R')
@@ -75,9 +99,25 @@ int main ()
                 {
                     array[j][k]='+';
                 }
-                k++;;
+                k++;
+                if(array[j][k]=='.')
+                {
+                    array[j][k]='-';
+                }
+                else if(array[j][k]=='|')
+                {
+                    array[j][k]='+';
+                }
             }
         }
+    }
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            printf("%c",array[i][j]);
+        }
+        printf("\n");
     }
     return 0;
 }
