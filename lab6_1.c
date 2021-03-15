@@ -31,13 +31,13 @@ int main ()
             }
         }
     }
-    /*for(l=0; l<5; l++)
+    /*for(l=0; l<2; l++)
     {
         for(j=1; j<n; j++)
         {
             for(i=0; i<j; i++)
             {
-                if(str[j][l-1]==str[i][l-1])
+                if(str[j][l-1]==str[i][l-1]&&str[j][0]==str[i][0])
                 {
                     if(str[j][l]<str[i][l])
                     {
